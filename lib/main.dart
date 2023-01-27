@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hour/view/add.dart';
-import 'package:hour/view/edit.dart';
-import 'package:hour/view/home.dart';
-import 'package:hour/view/login.dart';
+import 'package:hour/view/pages/add.dart';
+import 'package:hour/view/pages/edit.dart';
+import 'package:hour/view/pages/home.dart';
+import 'package:hour/view/pages/login.dart';
 
 void main() {
   runApp(
