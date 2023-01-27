@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hour/view/add.dart';
 import 'package:hour/view/edit.dart';
 import 'package:hour/view/home.dart';
+import 'package:hour/view/login.dart';
 
 void main() {
   runApp(
@@ -13,6 +14,7 @@ void main() {
 
       routes: {
         '/': (context) => const Home(),
+        '/login': (context) => const Login(),
         '/add': (context) => const Add(),
         '/edit': (context) => const Edit(),
       },
