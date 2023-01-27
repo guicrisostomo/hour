@@ -7,7 +7,7 @@ import 'package:hour/globals.dart' as globals;
 class TextFieldPassword extends StatefulWidget {
   final String label;
   final TextEditingController variavel;
-  final Function(String) onFieldSubmitted;
+  final Function onFieldSubmitted;
 
   const TextFieldPassword({super.key, required this.label, required this.variavel, required this.onFieldSubmitted});
 
