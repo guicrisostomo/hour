@@ -3,6 +3,7 @@ import 'package:hour/view/pages/add.dart';
 import 'package:hour/view/pages/edit.dart';
 import 'package:hour/view/pages/home.dart';
 import 'package:hour/view/pages/login.dart';
+import 'package:hour/view/pages/presentation.dart';
 import 'package:hour/view/pages/register.dart';
 
 void main() {
@@ -13,12 +14,13 @@ void main() {
 
       theme: ThemeData(scaffoldBackgroundColor: const Color.fromRGBO(252, 252, 252, 1)),
 
-      initialRoute: '/login',
+      initialRoute: '/',
 
       routes: {
-        '/': (context) => const Home(),
+        '/': (context) => const Presentation(),
         '/login': (context) => const Login(),
         '/register': (context) => const Register(),
+        '/home': (context) => const Home(),
         '/add': (context) => const Add(),
         '/edit': (context) => const Edit(),
       },
