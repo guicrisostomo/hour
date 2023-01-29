@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
   google_fonts: ^4.0.0
+  firebase_core: ^2.4.1
+  flutter_dotenv: ^5.0.2
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +69,7 @@ flutter:
     - lib/images/iconSeePassword.svg
     - lib/images/iconHidePassword.svg
     - lib/images/iconMyHour.png
+    - .env
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
