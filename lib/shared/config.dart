@@ -3,7 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 class Config {
   static String get projectId => _get('PROJECTID');
   static String get storageBucket => _get('STORAGEBUCKET');
-  static String get messagingSenderIdWeb => _get('MESSAGINGSENDERID');
+  static String get messagingSenderId => _get('MESSAGINGSENDERID');
 
   static String get apiKeyWeb => _get('APIKEYWEB');
   static String get appIdWeb => _get('APPIDWEB');
