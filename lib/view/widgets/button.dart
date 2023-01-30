@@ -25,7 +25,7 @@ Widget button(String text, double width, double height, Function() onPressed) {
         child: Text(
           text,
           style: TextStyle(
-            fontSize: 24,
+            fontSize: 20,
             color: globals.primary,
             fontWeight: FontWeight.w600,
           )
