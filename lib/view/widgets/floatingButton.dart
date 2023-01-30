@@ -7,7 +7,7 @@ Widget floatingButton(context) {
   return FloatingActionButton(
     backgroundColor: globals.primary,
     onPressed: () {
-      Navigator.pushNamed(context, 'cart');
+      Navigator.pushNamed(context, '/planning');
     },
 
     child: const Icon(
