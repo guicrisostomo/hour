@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hour/globals.dart' as globals;
+import 'package:hour/view/widgets/floatingButton.dart';
 import 'package:hour/view/widgets/list.dart';
 
 class Home extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomeState extends State<Home> {
         child: Column(
           children: [
             Container(
-              height: 200,
+              height: 150,
               width: double.infinity,
               color: globals.primary,
 
@@ -33,7 +34,7 @@ class _HomeState extends State<Home> {
                       'Olá, João',
                       style: GoogleFonts.lato(
                         color: Colors.white,
-                        fontSize: 40,
+                        fontSize: 32,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -75,7 +76,7 @@ class _HomeState extends State<Home> {
                               'Você não tem tarefas para agora',
                               style: GoogleFonts.lato(
                                 color: globals.primary,
-                                fontSize: 20,
+                                fontSize: 18,
                               ),
                             ),
                       
@@ -114,7 +115,7 @@ class _HomeState extends State<Home> {
                               '\"Frase inspiradora\"',
                               style: GoogleFonts.lato(
                                 color: globals.primary,
-                                fontSize: 20,
+                                fontSize: 16,
                               ),
                             ),
                       
@@ -138,7 +139,7 @@ class _HomeState extends State<Home> {
                   Text(
                     'Tarefas do dia',
                     style: GoogleFonts.lato(
-                      fontSize: 32,
+                      fontSize: 26,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -151,7 +152,9 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
-      )
+      ),
+
+      floatingActionButton: floatingButton(context),
     );
   }
 }

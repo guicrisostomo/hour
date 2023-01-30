@@ -20,7 +20,7 @@ class ListActivities extends StatelessWidget {
             title: Text(
               'DFGKÇDF',
               style: GoogleFonts.lato(
-                fontSize: 20,
+                fontSize: 18,
                 color: Colors.black,
                 fontWeight: FontWeight.w600,
               ),
