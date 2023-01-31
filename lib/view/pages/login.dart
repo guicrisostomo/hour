@@ -22,15 +22,14 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: Theme.of(context).copyWith(scaffoldBackgroundColor: globals.secundary),
-      child: Scaffold(
-        body: Column(
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.4,
+              height: 240,
               width: MediaQuery.of(context).size.width,
-
+      
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: const AssetImage(
@@ -40,7 +39,7 @@ class _LoginState extends State<Login> {
                   colorFilter: ColorFilter.mode(globals.primary.withOpacity(0.8), BlendMode.modulate),
                 ),
               ),
-
+      
               child: Padding(
                 padding: const EdgeInsets.all(40),
                 child: Column(
@@ -65,9 +64,9 @@ class _LoginState extends State<Login> {
                         fontSize: 20,
                       ),
                     ),
-
-                    const SizedBox(height: 20),
-
+      
+                    const SizedBox(height: 10),
+      
                     Container(
                       alignment: Alignment.centerRight,
                       child: button('Criar conta', 100, 50, () => Navigator.popAndPushNamed(context, '/register'))
@@ -77,29 +76,29 @@ class _LoginState extends State<Login> {
               ),
             ),
 
-            Expanded(
-              child: Container(
-                color: Colors.white,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 100),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      textFieldEmail('Email', txtEmail, context),
-                    
-                      const SizedBox(height: 10),
-                    
-                      TextFieldPassword(label: 'Senha', variavel: txtPassword, onFieldSubmitted: (value) => logIn()),
-
-                      const SizedBox(height: 20),
-
-                      Container(
-                        alignment: Alignment.centerRight,
-                        child: button('Entrar', 200, 50, logIn)
-                      ),
-                    ],
-                  ),
+            const SizedBox(height: 20),
+      
+            Container(
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    textFieldEmail('Email', txtEmail, context),
+                  
+                    const SizedBox(height: 10),
+                  
+                    TextFieldPassword(label: 'Senha', variavel: txtPassword, onFieldSubmitted: (value) => logIn()),
+      
+                    const SizedBox(height: 20),
+      
+                    Container(
+                      alignment: Alignment.centerRight,
+                      child: button('Entrar', 150, 50, logIn)
+                    ),
+                  ],
                 ),
               ),
             ),

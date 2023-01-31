@@ -57,8 +57,8 @@ class _PresentationState extends State<Presentation> {
                   crossAxisAlignment: CrossAxisAlignment.end,
               
                   children: [
-                    button('Cadastrar', 150, 50, () => Navigator.popAndPushNamed(context, '/register')),
-                    button('Entrar', 150, 50, () => Navigator.popAndPushNamed(context, '/login')),
+                    button('Cadastrar', 50, 50, () => Navigator.popAndPushNamed(context, '/register')),
+                    button('Entrar', 50, 50, () => Navigator.popAndPushNamed(context, '/login')),
                     
                   ],
                 ),

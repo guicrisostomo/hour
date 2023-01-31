@@ -50,8 +50,6 @@ class ListActivitiesEdit extends StatelessWidget {
                   ),
                 ),
             
-                const SizedBox(width: 10),
-            
                 IconButton(
                   iconSize: 30,
 

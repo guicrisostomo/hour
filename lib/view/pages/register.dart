@@ -30,7 +30,7 @@ class _RegisterState extends State<Register> {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.4,
+              height: 220,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 color: globals.primary,
@@ -103,7 +103,7 @@ class _RegisterState extends State<Register> {
 
                     Container(
                       alignment: Alignment.centerRight,
-                      child: button('Criar conta', 200, 50, register)
+                      child: button('Criar conta', 150, 50, register)
                     ),
 
                     const SizedBox(height: 20),

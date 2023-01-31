@@ -43,11 +43,9 @@ class ListActivities extends StatelessWidget {
                   size: 30,
                 ),
             
-                const SizedBox(width: 10),
-            
                 IconButton(
                   iconSize: 30,
-                  
+
                   onPressed: () {
                     
                   },
