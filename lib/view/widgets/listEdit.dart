@@ -38,14 +38,14 @@ class ListActivitiesEdit extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(
-                  Icons.edit,
+                  Icons.edit_outlined,
                   color: globals.primary,
                 ),
             
                 const SizedBox(width: 10),
             
                Icon(
-                  Icons.delete,
+                  Icons.delete_outlined,
                   color: globals.primary,
                 ),
               ], 
