@@ -38,14 +38,14 @@ class ListActivities extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(
-                  Icons.notification_add,
+                  Icons.info_outline,
                   color: globals.primary,
                 ),
             
                 const SizedBox(width: 10),
             
                Icon(
-                  Icons.check_circle,
+                  Icons.check_circle_outline,
                   color: globals.primary,
                 ),
               ], 
