@@ -40,13 +40,21 @@ class ListActivities extends StatelessWidget {
                 Icon(
                   Icons.info_outline,
                   color: globals.primary,
+                  size: 30,
                 ),
             
                 const SizedBox(width: 10),
             
-               Icon(
-                  Icons.check_circle_outline,
-                  color: globals.primary,
+                IconButton(
+                  iconSize: 30,
+                  
+                  onPressed: () {
+                    
+                  },
+                  icon: Icon(
+                    Icons.check_circle_outline,
+                    color: globals.primary,
+                  ),
                 ),
               ], 
             ),
@@ -54,7 +62,7 @@ class ListActivities extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(
                 context,
-                'products/info_product',
+                '/info_activity',
               );
             },
           )

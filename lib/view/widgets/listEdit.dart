@@ -37,17 +37,33 @@ class ListActivitiesEdit extends StatelessWidget {
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(
-                  Icons.edit_outlined,
-                  color: globals.primary,
+                IconButton(
+                  iconSize: 30,
+                  
+                  onPressed: () {
+                    
+                  },
+
+                  icon: Icon(
+                    Icons.edit_outlined,
+                    color: globals.primary,
+                  ),
                 ),
             
                 const SizedBox(width: 10),
             
-               Icon(
-                  Icons.delete_outlined,
-                  color: globals.primary,
-                ),
+                IconButton(
+                  iconSize: 30,
+
+                  onPressed: () {
+                    
+                  },
+
+                  icon: Icon(
+                    Icons.delete_outlined,
+                    color: globals.primary,
+                  ),
+               ),
               ], 
             ),
             
