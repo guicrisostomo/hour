@@ -8,8 +8,9 @@ class TextFieldConfirmPassword extends StatefulWidget {
   final String label;
   final TextEditingController variavel;
   final TextEditingController fieldPassword;
+  final Function onFieldSubmitted;
 
-  const TextFieldConfirmPassword({super.key, required this.label, required this.variavel, required this.fieldPassword});
+  const TextFieldConfirmPassword({super.key, required this.label, required this.variavel, required this.fieldPassword, required this.onFieldSubmitted});
 
   @override
   State<TextFieldConfirmPassword> createState() => _TextFieldConfirmPasswordState();
@@ -41,7 +42,7 @@ class _TextFieldConfirmPasswordState extends State<TextFieldConfirmPassword> {
         padding: const EdgeInsets.only(left: 20),
         child: Row(
           children: [
-            textField(widget.label, widget.variavel, widget.fieldPassword),
+            textField(widget.label, widget.variavel, widget.fieldPassword, widget.onFieldSubmitted),
             
             GestureDetector(
               child: SvgPicture.asset(
@@ -62,7 +63,7 @@ class _TextFieldConfirmPasswordState extends State<TextFieldConfirmPassword> {
     );
   }
 
-  Widget textField (label, variavel, fieldPassword) {
+  Widget textField (label, variavel, fieldPassword, onFieldSubmitted) {
     return Container(
       margin: const EdgeInsets.only(bottom: 15),
       width: MediaQuery.of(context).size.width - 120,
@@ -108,6 +109,8 @@ class _TextFieldConfirmPasswordState extends State<TextFieldConfirmPassword> {
 
             return null;
           },
+
+          onFieldSubmitted: onFieldSubmitted,
         )
       )
     );
