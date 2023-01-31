@@ -64,13 +64,6 @@ class ListActivitiesEdit extends StatelessWidget {
                ),
               ], 
             ),
-            
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                'products/info_product',
-              );
-            },
           )
         );
       },
