@@ -12,84 +12,19 @@ class Planning extends StatefulWidget {
 }
 
 class _PlanningState extends State<Planning> {
-  static bool isPlanningDay = true;
   static String daySelected = 'Domingo';
 
-  List<Widget> dayWeek() {
-    return <Widget> [
-      (!isPlanningDay) ?
-        Wrap(
-          direction: Axis.horizontal,
-          alignment: WrapAlignment.spaceBetween,
-          spacing: 20,
-          runSpacing: 20,
+  static const List<String> daysOfWeek = [
+    'Domingo',
+    'Segunda',
+    'Terça',
+    'Quarta',
+    'Quinta',
+    'Sexta',
+    'Sábado',
+  ];
 
-          children: [
-            button('Dom', 40, 40, () => {
-              setState(() {
-                daySelected = 'Domingo';
-              })
-            },),
-        
-            button('Seg', 40, 40, () => {
-              setState(() {
-                daySelected = 'Segunda';
-              })
-            },),
-        
-            button('Ter', 40, 40, () => {
-              setState(() {
-                daySelected = 'Terça';
-              })
-            },),
-        
-            button('Qua', 40, 40, () => {
-              setState(() {
-                daySelected = 'Quarta';
-              })
-            },),
-        
-            button('Qui', 40, 40, () => {
-              setState(() {
-                daySelected = 'Quinta';
-              })
-            },),
-        
-            button('Sex', 40, 40, () => {
-              setState(() {
-                daySelected = 'Sexta';
-              })
-            },),
-        
-            button('Sab', 40, 40, () => {
-              setState(() {
-                daySelected = 'Sábado';
-              })
-            },),
-          ],
-        )
-      : const SizedBox.shrink()
-    ];
-  }
-
-  List<Widget> dayWeekSelect() {
-    return <Widget> [
-      (!isPlanningDay) ?
-        Column(
-          children: [
-            Text(
-              daySelected,
-              style: const TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        )
-      : const SizedBox.shrink()
-    ];
-  }
+  
   
   @override
   Widget build(BuildContext context) {
@@ -118,7 +53,7 @@ class _PlanningState extends State<Planning> {
                 colorFilter: ColorFilter.mode(globals.primary.withOpacity(0.8), BlendMode.modulate),
               ),
             ),
-            
+
             child: Center(
               child: Wrap(
                 direction: Axis.horizontal,
@@ -140,22 +75,28 @@ class _PlanningState extends State<Planning> {
                   
                         const SizedBox(height: 20),
                   
-                        Row(
-                          children: [
-                            button("Diário", 40, 40, () => {
-                              setState(() {
-                                isPlanningDay = true;
-                              })
-                            },),
-                  
-                            const SizedBox(width: 10),
-                  
-                            button("Semanal", 40, 40, () => {
-                              setState(() {
-                                isPlanningDay = false;
-                              })
-                            },),
-                          ]
+                        DropdownButtonFormField(
+                          decoration: const InputDecoration(
+                            prefixIcon: Icon(Icons.calendar_today),
+                            hintText: 'Selecione o dia da semana',
+                            filled: true,
+                            fillColor: Colors.white,
+                            errorStyle: TextStyle(color: Colors.yellow),
+                          ),
+
+                          items: daysOfWeek.map((map) {
+                            return DropdownMenuItem(
+                              value: map,
+                              child: Text(map),
+                            );
+                          }).toList(),
+
+                          onChanged: (value) {
+                            setState(() {
+                              daySelected = value.toString();
+                            });
+                          },
+                          value: daySelected,
                         )
                       ]
                     ),
@@ -171,15 +112,13 @@ class _PlanningState extends State<Planning> {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
-            children: [
+            children: const [
 
-              ...dayWeekSelect(),
+              ListActivitiesEdit(),
 
-              const ListActivitiesEdit(),
+              SizedBox(height: 20),
 
-              const SizedBox(height: 20),
 
-              ...dayWeek(),
             ],
           ),
         ),
