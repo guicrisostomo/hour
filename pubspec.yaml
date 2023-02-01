@@ -69,6 +69,7 @@ flutter:
     - lib/images/iconSeePassword.svg
     - lib/images/iconHidePassword.svg
     - lib/images/iconMyHour.png
+    - lib/images/imgPeople.jpg
     - .env
   #   - images/a_dot_ham.jpeg
 

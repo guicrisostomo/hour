@@ -22,6 +22,17 @@ class _HomeState extends State<Home> {
               height: 150,
               width: double.infinity,
               color: globals.primary,
+              
+              decoration: BoxDecoration(
+                color: globals.primary,
+                image: DecorationImage(
+                  image: const AssetImage(
+                    "lib/images/imgBubbles.jpg",
+                  ),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(globals.primary.withOpacity(0.8), BlendMode.modulate),
+                ),
+              ),
 
               child: Padding(
                 padding: const EdgeInsets.all(40),
