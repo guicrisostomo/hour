@@ -3,6 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hour/view/pages/add.dart';
 import 'package:hour/view/pages/edit.dart';
 import 'package:hour/view/pages/home.dart';
+import 'package:hour/view/pages/info_activity.dart';
 import 'package:hour/view/pages/login.dart';
 import 'package:hour/view/pages/planning.dart';
 import 'package:hour/view/pages/presentation.dart';
@@ -29,6 +30,7 @@ Future<void> main() async {
         '/add': (context) => const Add(),
         '/edit': (context) => const Edit(),
         '/planning': (context) => const Planning(),
+        '/info_activity': (context) => const InfoActivity(),
       },
     ),
   );
