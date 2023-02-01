@@ -70,6 +70,9 @@ flutter:
     - lib/images/iconMyHour.png
     - lib/images/imgPeople.jpg
     - lib/images/imgBubbles.jpg
+    - lib/images/imgCalendar.jpg
+    - lib/images/imgGoal.jpg
+    - lib/images/imgPlanning.jpg
     - .env
   #   - images/a_dot_ham.jpeg
 

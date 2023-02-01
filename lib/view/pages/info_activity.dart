@@ -91,41 +91,54 @@ class _InfoActivityState extends State<InfoActivity> {
               fontWeight: FontWeight.w600,
             ),
           ),
-          backgroundColor: globals.primary,
-      
-          flexibleSpace: Center(
-            child: Wrap(
-              direction: Axis.horizontal,
-              children: [
-                
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Text(
-                        'SFSDFSDFSDF',
-                        style: GoogleFonts.lato(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-
-                      const SizedBox(height: 5),
-
-                      Text(
-                        'De segunda à sexta, das 14h às 18h',
-                        style: GoogleFonts.lato(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                      ),
-                    ]
-                  ),
+        
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              color: globals.primary,
+              image: DecorationImage(
+                image: const AssetImage(
+                  "lib/images/imgGoal.jpg",
                 ),
-              ]
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(globals.primary.withOpacity(0.8), BlendMode.modulate),
+              ),
+            ),
+            
+            child: Center(
+              child: Wrap(
+                direction: Axis.horizontal,
+                  
+                children: [
+                  
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text(
+                          'SFSDFSDFSDF',
+                          style: GoogleFonts.lato(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                  
+                        const SizedBox(height: 5),
+                  
+                        Text(
+                          'De segunda à sexta, das 14h às 18h',
+                          style: GoogleFonts.lato(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ]
+                    ),
+                  ),
+                ]
+              ),
             ),
           )
         ),

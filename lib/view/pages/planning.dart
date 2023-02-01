@@ -106,49 +106,62 @@ class _PlanningState extends State<Planning> {
             ),
           ),
           backgroundColor: globals.primary,
-      
-          flexibleSpace: Center(
-            child: Wrap(
-              direction: Axis.horizontal,
-              children: [
-                
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Text(
-                        'Planeje suas horas do dia',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                      ),
-
-                      const SizedBox(height: 20),
-
-                      Row(
-                        children: [
-                          button("Diário", 40, 40, () => {
-                            setState(() {
-                              isPlanningDay = true;
-                            })
-                          },),
-
-                          const SizedBox(width: 10),
-
-                          button("Semanal", 40, 40, () => {
-                            setState(() {
-                              isPlanningDay = false;
-                            })
-                          },),
-                        ]
-                      )
-                    ]
-                  ),
+            
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              color: globals.primary,
+              image: DecorationImage(
+                image: const AssetImage(
+                  "lib/images/imgCalendar.jpg",
                 ),
-              ]
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(globals.primary.withOpacity(0.8), BlendMode.modulate),
+              ),
+            ),
+            
+            child: Center(
+              child: Wrap(
+                direction: Axis.horizontal,
+                children: [
+                  
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text(
+                          'Planeje suas horas do dia',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                  
+                        const SizedBox(height: 20),
+                  
+                        Row(
+                          children: [
+                            button("Diário", 40, 40, () => {
+                              setState(() {
+                                isPlanningDay = true;
+                              })
+                            },),
+                  
+                            const SizedBox(width: 10),
+                  
+                            button("Semanal", 40, 40, () => {
+                              setState(() {
+                                isPlanningDay = false;
+                              })
+                            },),
+                          ]
+                        )
+                      ]
+                    ),
+                  ),
+                ]
+              ),
             ),
           )
         ),
