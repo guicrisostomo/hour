@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
                 color: globals.primary,
                 image: DecorationImage(
                   image: const AssetImage(
-                    "lib/images/background.jpg",
+                    "lib/images/imgPeople.jpg",
                   ),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(globals.primary.withOpacity(0.8), BlendMode.modulate),
