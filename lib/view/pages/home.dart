@@ -20,8 +20,7 @@ class _HomeState extends State<Home> {
           children: [
             Container(
               height: 150,
-              width: double.infinity,
-              color: globals.primary,
+              width: MediaQuery.of(context).size.width,
               
               decoration: BoxDecoration(
                 color: globals.primary,
@@ -87,7 +86,7 @@ class _HomeState extends State<Home> {
                               'Você não tem tarefas para agora',
                               style: GoogleFonts.lato(
                                 color: globals.primary,
-                                fontSize: 18,
+                                fontSize: 16,
                               ),
                             ),
                       
@@ -97,7 +96,7 @@ class _HomeState extends State<Home> {
                               'Das 14:00 às 15:00',
                               style: GoogleFonts.lato(
                                 color: Colors.black54,
-                                fontSize: 16,
+                                fontSize: 14,
                               ),
                             ),
                           ],
@@ -136,7 +135,7 @@ class _HomeState extends State<Home> {
                               'Autor: João',
                               style: GoogleFonts.lato(
                                 color: Colors.black54,
-                                fontSize: 16,
+                                fontSize: 14,
                               ),
                             ),
                           ],
