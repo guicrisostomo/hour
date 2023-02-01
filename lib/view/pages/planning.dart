@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hour/globals.dart' as globals;
+import 'package:hour/view/widgets/addRotine.dart';
 import 'package:hour/view/widgets/button.dart';
 import 'package:hour/view/widgets/listEdit.dart';
 
@@ -112,13 +113,15 @@ class _PlanningState extends State<Planning> {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
-            children: const [
+            children: [
 
-              ListActivitiesEdit(),
+              const ListActivitiesEdit(),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
-
+              addRotine(() {
+                Navigator.pushNamed(context, '/add');
+              }),
             ],
           ),
         ),
