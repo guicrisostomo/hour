@@ -41,7 +41,7 @@ class ListActivitiesEdit extends StatelessWidget {
                   iconSize: 30,
                   
                   onPressed: () {
-                    
+                    Navigator.pushNamed(context, '/edit');
                   },
 
                   icon: Icon(
