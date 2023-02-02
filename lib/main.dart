@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hour/view/pages/add.dart';
+import 'package:hour/view/pages/custom_date_rotine.dart';
 import 'package:hour/view/pages/edit.dart';
+import 'package:hour/view/pages/goals_rotine.dart';
 import 'package:hour/view/pages/home.dart';
 import 'package:hour/view/pages/info_activity.dart';
 import 'package:hour/view/pages/login.dart';
@@ -28,6 +30,8 @@ Future<void> main() async {
         '/register': (context) => const Register(),
         '/home': (context) => const Home(),
         '/add': (context) => const Add(),
+        '/add/custom_date_rotine':(context) => const CustomDateRotine(),
+        '/add/custom_date_rotine/add_goals': (context) => const GoalsRotine(),
         '/edit': (context) => const Edit(),
         '/planning': (context) => const Planning(),
         '/info_activity': (context) => const InfoActivity(),
