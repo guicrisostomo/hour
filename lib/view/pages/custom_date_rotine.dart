@@ -164,7 +164,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
               
               const SizedBox(height: 10),
               
-              CheckboxListTile(
+              SwitchListTile(
                 value: listDaysCheckedValue[0],
                 onChanged: (value) => {
                   setState(() {
@@ -187,7 +187,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
           
               const SizedBox(height: 10),
           
-              CheckboxListTile(
+              SwitchListTile(
                 value: listDaysCheckedValue[1],
                 onChanged: (value) => {
                   setState(() {
@@ -210,7 +210,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
           
               const SizedBox(height: 10),
           
-              CheckboxListTile(
+              SwitchListTile(
                 value: listDaysCheckedValue[2],
                 onChanged: (value) => {
                   setState(() {
@@ -233,7 +233,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
           
               const SizedBox(height: 10),
           
-              CheckboxListTile(
+              SwitchListTile(
                 value: listDaysCheckedValue[3],
                 onChanged: (value) => {
                   setState(() {
@@ -256,7 +256,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
           
               const SizedBox(height: 10),
           
-              CheckboxListTile(
+              SwitchListTile(
                 value: listDaysCheckedValue[4],
                 onChanged: (value) => {
                   setState(() {
@@ -279,7 +279,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
           
               const SizedBox(height: 10),
           
-              CheckboxListTile(
+              SwitchListTile(
                 value: listDaysCheckedValue[5],
                 onChanged: (value) => {
                   setState(() {
@@ -302,7 +302,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
           
               const SizedBox(height: 10),
           
-              CheckboxListTile(
+              SwitchListTile(
                 value: listDaysCheckedValue[6],
                 onChanged: (value) => {
                   setState(() {
