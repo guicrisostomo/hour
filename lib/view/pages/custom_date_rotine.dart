@@ -165,6 +165,12 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
               const SizedBox(height: 10),
               
               SwitchListTile(
+                inactiveTrackColor: const Color.fromARGB(255, 235, 66, 54),
+                inactiveThumbColor: const Color.fromARGB(255, 189, 52, 42),
+
+                activeTrackColor: const Color.fromARGB(255, 86, 196, 90),
+                activeColor: const Color.fromARGB(255, 42, 97, 44),
+
                 value: listDaysCheckedValue[0],
                 onChanged: (value) => {
                   setState(() {
@@ -180,7 +186,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
                     ),
                   )
                 ),
-                controlAffinity: ListTileControlAffinity.leading,
+                controlAffinity: ListTileControlAffinity.platform,
               ),
           
               ShowHourDay(0, txtForSun, txtUntilSun),
@@ -188,6 +194,12 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
               const SizedBox(height: 10),
           
               SwitchListTile(
+                inactiveTrackColor: const Color.fromARGB(255, 235, 66, 54),
+                inactiveThumbColor: const Color.fromARGB(255, 189, 52, 42),
+
+                activeTrackColor: const Color.fromARGB(255, 86, 196, 90),
+                activeColor: const Color.fromARGB(255, 42, 97, 44),
+
                 value: listDaysCheckedValue[1],
                 onChanged: (value) => {
                   setState(() {
@@ -203,7 +215,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
                     ),
                   )
                 ),
-                controlAffinity: ListTileControlAffinity.leading,
+                controlAffinity: ListTileControlAffinity.platform,
               ),
           
               ShowHourDay(1, txtForMon, txtUntilMon),
@@ -211,6 +223,12 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
               const SizedBox(height: 10),
           
               SwitchListTile(
+                inactiveTrackColor: const Color.fromARGB(255, 235, 66, 54),
+                inactiveThumbColor: const Color.fromARGB(255, 189, 52, 42),
+
+                activeTrackColor: const Color.fromARGB(255, 86, 196, 90),
+                activeColor: const Color.fromARGB(255, 42, 97, 44),
+
                 value: listDaysCheckedValue[2],
                 onChanged: (value) => {
                   setState(() {
@@ -226,7 +244,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
                     ),
                   )
                 ),
-                controlAffinity: ListTileControlAffinity.leading,
+                controlAffinity: ListTileControlAffinity.platform,
               ),
           
               ShowHourDay(2, txtForTue, txtUntilTue),
@@ -234,6 +252,12 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
               const SizedBox(height: 10),
           
               SwitchListTile(
+                inactiveTrackColor: const Color.fromARGB(255, 235, 66, 54),
+                inactiveThumbColor: const Color.fromARGB(255, 189, 52, 42),
+
+                activeTrackColor: const Color.fromARGB(255, 86, 196, 90),
+                activeColor: const Color.fromARGB(255, 42, 97, 44),
+
                 value: listDaysCheckedValue[3],
                 onChanged: (value) => {
                   setState(() {
@@ -249,7 +273,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
                     ),
                   )
                 ),
-                controlAffinity: ListTileControlAffinity.leading,
+                controlAffinity: ListTileControlAffinity.platform,
               ),
           
               ShowHourDay(3, txtForWed, txtUntilWed),
@@ -257,6 +281,12 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
               const SizedBox(height: 10),
           
               SwitchListTile(
+                inactiveTrackColor: const Color.fromARGB(255, 235, 66, 54),
+                inactiveThumbColor: const Color.fromARGB(255, 189, 52, 42),
+
+                activeTrackColor: const Color.fromARGB(255, 86, 196, 90),
+                activeColor: const Color.fromARGB(255, 42, 97, 44),
+
                 value: listDaysCheckedValue[4],
                 onChanged: (value) => {
                   setState(() {
@@ -272,7 +302,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
                     ),
                   )
                 ),
-                controlAffinity: ListTileControlAffinity.leading,
+                controlAffinity: ListTileControlAffinity.platform,
               ),
           
               ShowHourDay(4, txtForThu, txtUntilThu),
@@ -280,6 +310,12 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
               const SizedBox(height: 10),
           
               SwitchListTile(
+                inactiveTrackColor: const Color.fromARGB(255, 235, 66, 54),
+                inactiveThumbColor: const Color.fromARGB(255, 189, 52, 42),
+
+                activeTrackColor: const Color.fromARGB(255, 86, 196, 90),
+                activeColor: const Color.fromARGB(255, 42, 97, 44),
+
                 value: listDaysCheckedValue[5],
                 onChanged: (value) => {
                   setState(() {
@@ -295,7 +331,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
                     ),
                   )
                 ),
-                controlAffinity: ListTileControlAffinity.leading,
+                controlAffinity: ListTileControlAffinity.platform,
               ),
           
               ShowHourDay(5, txtForFri, txtUntilFri),
@@ -303,6 +339,12 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
               const SizedBox(height: 10),
           
               SwitchListTile(
+                inactiveTrackColor: const Color.fromARGB(255, 235, 66, 54),
+                inactiveThumbColor: const Color.fromARGB(255, 189, 52, 42),
+
+                activeTrackColor: const Color.fromARGB(255, 86, 196, 90),
+                activeColor: const Color.fromARGB(255, 42, 97, 44),
+
                 value: listDaysCheckedValue[6],
                 onChanged: (value) => {
                   setState(() {
@@ -318,7 +360,7 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
                     ),
                   )
                 ),
-                controlAffinity: ListTileControlAffinity.leading,
+                controlAffinity: ListTileControlAffinity.platform,
               ),
           
               ShowHourDay(6, txtForSat, txtUntilSat),

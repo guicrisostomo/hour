@@ -15,10 +15,10 @@ class GoalsRotine extends StatefulWidget {
 class _GoalsRotineState extends State<GoalsRotine> {
   var txtName = TextEditingController();
   var txtDescription = TextEditingController();
+  static bool isDailyGoal = true;
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(210),
@@ -108,11 +108,32 @@ class _GoalsRotineState extends State<GoalsRotine> {
         
               textField('Nome', txtName, context),
         
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
         
               textField('Descrição', txtDescription, context),
-        
+
               const SizedBox(height: 10),
+
+              SwitchListTile(
+                value: isDailyGoal,
+                onChanged: (value) => {
+                  setState(() {
+                    isDailyGoal = value!;
+                  })
+                },
+                title: Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'É um objetivo diário ?',
+                    style: GoogleFonts.lato(
+                      fontSize: 18,
+                    ),
+                  )
+                ),
+                controlAffinity: ListTileControlAffinity.platform,
+              ),
+        
+              const SizedBox(height: 20),
         
               button('Adicionar objetivo', 50, 50, () {
                 
