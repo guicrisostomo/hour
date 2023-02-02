@@ -36,7 +36,7 @@ Widget textField(label, variavel, context) {
         controller: variavel,
 
         style: const TextStyle(
-          fontSize: 24,
+          fontSize: 16,
           color: Colors.black,
         ),
 
