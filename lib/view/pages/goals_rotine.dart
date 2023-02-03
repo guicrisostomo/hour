@@ -17,6 +17,9 @@ class _GoalsRotineState extends State<GoalsRotine> {
   var txtDescription = TextEditingController();
   static bool isDailyGoal = true;
 
+  var formKey = GlobalKey<FormState>();
+  bool autoValidation = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,94 +88,99 @@ class _GoalsRotineState extends State<GoalsRotine> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              Text(
-                'Informe o nome e descrição do objetivo',
-                style: GoogleFonts.lato(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
+          child: Form(
+            key: formKey,
+            autovalidateMode: autoValidation ? AutovalidateMode.always : AutovalidateMode.disabled,
+            
+            child: Column(
+              children: [
+                Text(
+                  'Informe o nome e descrição do objetivo',
+                  style: GoogleFonts.lato(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
-
-              const SizedBox(height: 10),
-
-              Text(
-                'Adicione objetivos a rotina para que você possa acompanhar o seu progresso (ex: ler 1 capítulo de um livro por dia)',
-                style: GoogleFonts.lato(
-                  fontSize: 16,
+          
+                const SizedBox(height: 10),
+          
+                Text(
+                  'Adicione objetivos a rotina para que você possa acompanhar o seu progresso (ex: ler 1 capítulo de um livro por dia)',
+                  style: GoogleFonts.lato(
+                    fontSize: 16,
+                  ),
                 ),
-              ),
-        
-              const SizedBox(height: 20),
-        
-              textField('Nome', txtName, context),
-        
-              const SizedBox(height: 10),
-        
-              textField('Descrição', txtDescription, context),
-
-              const SizedBox(height: 10),
-
-              SwitchListTile(
-                value: isDailyGoal,
-                onChanged: (value) => {
-                  setState(() {
-                    isDailyGoal = value!;
-                  })
-                },
-                title: Container(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'É um objetivo diário ?',
-                    style: GoogleFonts.lato(
-                      fontSize: 18,
-                    ),
-                  )
+                  
+                const SizedBox(height: 20),
+                  
+                textField('Nome', txtName, context),
+                  
+                const SizedBox(height: 10),
+                  
+                textField('Descrição', txtDescription, context),
+          
+                const SizedBox(height: 10),
+          
+                SwitchListTile(
+                  value: isDailyGoal,
+                  onChanged: (value) => {
+                    setState(() {
+                      isDailyGoal = value!;
+                    })
+                  },
+                  title: Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'É um objetivo diário ?',
+                      style: GoogleFonts.lato(
+                        fontSize: 18,
+                      ),
+                    )
+                  ),
+                  controlAffinity: ListTileControlAffinity.platform,
                 ),
-                controlAffinity: ListTileControlAffinity.platform,
-              ),
-        
-              const SizedBox(height: 20),
-        
-              button('Adicionar objetivo', 50, 50, () {
-                
-              }),
-
-              const SizedBox(height: 20),
-
-              Text(
-                'Objetivos adicionados',
-                style: GoogleFonts.lato(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
+                  
+                const SizedBox(height: 20),
+                  
+                button('Adicionar objetivo', 50, 50, () {
+                  
+                }),
+          
+                const SizedBox(height: 20),
+          
+                Text(
+                  'Objetivos adicionados',
+                  style: GoogleFonts.lato(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
-
-              const SizedBox(height: 10),
-
-              const ListActivitiesEdit(),
-
-              const SizedBox(height: 50),
-        
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.end,
-        
-                children: [
-                  button('Voltar', 50, 50, () {
-                    Navigator.pop(context);
-                  }),
-        
-                  const SizedBox(width: 10),
-        
-                  button('Finalizar', 50, 50, () {
-                    Navigator.popUntil(context, ModalRoute.withName('/home'));
-                  }),
-                ],
-              )
-            ],
+          
+                const SizedBox(height: 10),
+          
+                const ListActivitiesEdit(),
+          
+                const SizedBox(height: 50),
+                  
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  
+                  children: [
+                    button('Voltar', 50, 50, () {
+                      Navigator.pop(context);
+                    }),
+                  
+                    const SizedBox(width: 10),
+                  
+                    button('Finalizar', 50, 50, () {
+                      Navigator.popUntil(context, ModalRoute.withName('/home'));
+                    }),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),

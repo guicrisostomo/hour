@@ -18,6 +18,10 @@ class _RegisterState extends State<Register> {
   var txtPassword = TextEditingController();
   var txtConfirmPassword = TextEditingController();
 
+  var formKey = GlobalKey<FormState>();
+  
+  bool autoValidation = false;
+
   void register() {
     Navigator.popAndPushNamed(context, '/home');
   }
@@ -45,36 +49,41 @@ class _RegisterState extends State<Register> {
     
               child: Padding(
                 padding: const EdgeInsets.all(40),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Criar conta',
-                      style: GoogleFonts.lato(
-                        color: Colors.white,
-                        fontSize: 40,
-                        fontWeight: FontWeight.w600,
+                child: Form(
+                  key: formKey,
+                  autovalidateMode: autoValidation ? AutovalidateMode.always : AutovalidateMode.disabled,
+                  
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Criar conta',
+                        style: GoogleFonts.lato(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
-                    ),
-              
-                    const SizedBox(height: 5),
-              
-                    Text(
-                      'Já possui uma conta ?',
-                      style: GoogleFonts.lato(
-                        color: Colors.white,
-                        fontSize: 20,
+                              
+                      const SizedBox(height: 5),
+                              
+                      Text(
+                        'Já possui uma conta ?',
+                        style: GoogleFonts.lato(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
-                    ),
-    
-                    const SizedBox(height: 20),
-    
-                    Container(
-                      alignment: Alignment.centerRight,
-                      child: button('Entrar', 100, 50, () => Navigator.popAndPushNamed(context, '/login'))
-                    ),
-                  ],
+                    
+                      const SizedBox(height: 20),
+                    
+                      Container(
+                        alignment: Alignment.centerRight,
+                        child: button('Entrar', 100, 50, () => Navigator.popAndPushNamed(context, '/login'))
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

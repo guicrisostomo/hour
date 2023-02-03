@@ -29,6 +29,8 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
 
   static List listDaysCheckedValue = [false, false, false, false, false, false, false];
 
+  var formKey = GlobalKey<FormState>();
+  bool autoValidation = false;
 
   @override
   Widget build(BuildContext context) {
@@ -37,44 +39,49 @@ class _CustomDateRotineState extends State<CustomDateRotine> {
       return listDaysCheckedValue[day] ?
         Column(
           children: [
-            Row(
-              children: [
-
-                const SizedBox(width: 10),
-
-                SizedBox(
-                  width: 100,
-                  child: TextField(
-                    controller: controllerFor,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'De',
+            Form(
+              key: formKey,
+              autovalidateMode: autoValidation ? AutovalidateMode.always : AutovalidateMode.disabled,
+              
+              child: Row(
+                children: [
+            
+                  const SizedBox(width: 10),
+            
+                  SizedBox(
+                    width: 100,
+                    child: TextField(
+                      controller: controllerFor,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'De',
+                      ),
                     ),
                   ),
-                ),
-
-                const SizedBox(width: 10),
-
-                Text(
-                  'às',
-                  style: GoogleFonts.lato(
-                    fontSize: 18,
-                  ),
-                ),
-
-                const SizedBox(width: 10),
-
-                SizedBox(
-                  width: 100,
-                  child: TextField(
-                    controller: controllerUntil,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Até',
+            
+                  const SizedBox(width: 10),
+            
+                  Text(
+                    'às',
+                    style: GoogleFonts.lato(
+                      fontSize: 18,
                     ),
                   ),
-                ),
-              ],
+            
+                  const SizedBox(width: 10),
+            
+                  SizedBox(
+                    width: 100,
+                    child: TextField(
+                      controller: controllerUntil,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Até',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         )

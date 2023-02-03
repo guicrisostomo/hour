@@ -13,6 +13,11 @@ class Add extends StatefulWidget {
 }
 
 class _AddState extends State<Add> {
+
+  var formKey = GlobalKey<FormState>();
+
+  bool autoValidation = false;
+
   @override
   Widget build(BuildContext context) {
     var txtNome = TextEditingController();
@@ -91,7 +96,11 @@ class _AddState extends State<Add> {
       
               const SizedBox(height: 10),
       
-              textField('Nome da rotina', txtNome, context),
+              Form(
+                key: formKey,
+                autovalidateMode: autoValidation ? AutovalidateMode.always : AutovalidateMode.disabled,
+                child: textField('Nome da rotina', txtNome, context)
+              ),
       
               const SizedBox(height: 10),
       
