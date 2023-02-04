@@ -76,6 +76,7 @@ flutter:
     - lib/images/imgCalendar.jpg
     - lib/images/imgGoal.jpg
     - lib/images/imgPlanning.jpg
+    - lib/images/google_logo.png
     - .env
   #   - images/a_dot_ham.jpeg
 
