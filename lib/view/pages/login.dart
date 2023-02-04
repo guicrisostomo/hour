@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hour/view/widgets/button.dart';
+import 'package:hour/view/widgets/googleButton.dart';
 import 'package:hour/view/widgets/textFieldEmail.dart';
 import 'package:hour/view/widgets/textFieldPassword.dart';
 import 'package:hour/globals.dart' as globals;
@@ -102,6 +103,10 @@ class _LoginState extends State<Login> {
                   
                     TextFieldPassword(label: 'Senha', variavel: txtPassword, onFieldSubmitted: (value) => logIn()),
       
+                    const SizedBox(height: 20),
+
+                    GoogleAuthButton(),
+
                     const SizedBox(height: 20),
       
                     Container(
