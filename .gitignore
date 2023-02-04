@@ -49,3 +49,4 @@ app.*.map.json
 /macos/firebase_app_id_file.json
 
 *.env
+android/client_secret_275516131165-jumu34mtqb14gmo2ko6uelr9f0i4u127.apps.googleusercontent.com.json
